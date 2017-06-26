@@ -1,0 +1,36 @@
+.navegador {
+  background: rgb(1, 137, 150);
+  width: auto;
+  height: 300px;
+}
+.navegador .menu {
+  background: rgb(0, 40, 108);
+  font-size: 20px;
+  font-family: sans-serif, Arial;
+  font-weight: bold;
+}
+.navegador .menu ul li
+{
+  padding: 20px;
+  display: inline-block;
+}
+.navegador .menu ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+body{
+  background: #ccc;
+}
+
+.publicidad{
+  height: 350px;
+  width: auto;
+}
+
+.publicidad img{
+  clip: rect(100px, 50px,500px,100px);  
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
