@@ -16,6 +16,9 @@ if(isset($_POST["apellido_pat"]) && $_POST["apellido_pat"]!="" ){
 if(isset($_POST["direccion"]) && $_POST["direccion"]!="" ){
   $direccion=$_POST["direccion"];
 }
+if(isset($_POST["telefono"]) && $_POST["telefono"]!="" ){
+  $telefono=$_POST["telefono"];
+}
 if(isset($_POST["correo"]) && $_POST["correo"]!="" ){
   $correo=$_POST["correo"];
 }
@@ -28,7 +31,7 @@ if(isset($_POST["clave"]) && $_POST["clave"]!="" ){
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
 { $objCli=new Cliente();
-  $objCli->Cliente($rut,$nombre,$apellido_pat,$apellido_pat,$direccion,$correo,$actividad,$clave);
+  $objCli->Cliente($rut,$nombre,$apellido_pat,$apellido_mat,$direccion,$telefono,$correo,$actividad,$clave);
   $resul=$objCli->ingresarCli();
   // if ($resul!="") {
   //   header("Location:../Vista/Registro.php");

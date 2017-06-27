@@ -7,18 +7,20 @@
 		private $apellido_mat;
 		private $apellido_pat;
 		private $direccion;
+		private $telefono;
 		private $correo;
 		private $actividad;
 		private $clave;
 
 		public function __construct(){}
 
-		public function Cliente($rut,$nombre,$apellido_mat,$apellido_pat,$direccion,$correo,$actividad,$clave){
+		public function Cliente($rut,$nombre,$apellido_pat,$apellido_mat,$direccion,$telefono,$correo,$actividad,$clave){
 			$this->rut=$rut;
 			$this->nombre=$nombre;
 			$this->apellido_mat=$apellido_mat;
 			$this->apellido_pat=$apellido_pat;
 			$this->direccion=$direccion;
+			$this->telefono=$telefono;
 			$this->correo=$correo;
 			$this->actividad=$actividad;
 			$this->clave=$clave;
@@ -39,6 +41,9 @@
 		}
 		public function getDireccion(){
 			return $this->direccion;
+		}
+		public function getTelefono(){
+			return $this->telefono;
 		}
 		public function getCorreo(){
 			return $this->correo;
@@ -65,6 +70,9 @@
 		public function setDireccion($direccion){
 			return $this->direccion=$direccion;
 		}
+		public function setTelefono($telefono){
+			return $this->telefono=$telefono;
+		}
 		public function setCorreo($correo){
 			return $this->correo=$correo;
 		}
@@ -77,7 +85,7 @@
 		//CUSTOMERS
 		public function ingresarCli(){
    		 $objConex=new Conexion();
-    	 $sql="INSERT INTO CLIENTE VALUES('".$this->rut."','".$this->nombre."','".$this->apellido_mat."','".$this->apellido_pat."','".$this->direccion."','".$this->correo."','".$this->actividad."','".$this->clave."')";
+    	 $sql="INSERT INTO CLIENTE VALUES('".$this->rut."','".$this->nombre."','".$this->apellido_mat."','".$this->apellido_pat."','".$this->direccion."',".$this->telefono.",'".$this->correo."',".$this->actividad.",'".$this->clave."')";
      	 $resul=$objConex->generarTransaccion($sql);
     	 return $resul;
    		}
