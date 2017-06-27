@@ -75,6 +75,11 @@
 			return $this->clave=$clave;
 		}
 		//CUSTOMERS
-	 
+		public function ingresarCli(){
+   		 $objConex=new Conexion();
+    	 $sql="INSERT INTO CLIENTE VALUES('".$this->rut."','".$this->nombre."','".$this->apellido_mat."','".$this->apellido_pat."','".$this->direccion."','".$this->correo."','".$this->actividad."','".$this->clave."')";
+     	 $resul=$objConex->generarTransaccion($sql);
+    	 return $resul;
+   		}
 	}
 ?>
